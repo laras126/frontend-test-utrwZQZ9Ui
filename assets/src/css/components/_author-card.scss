@@ -1,16 +1,40 @@
 // Author Card Component
 
+.a-card {
+	@media ( query( min, tablet ) ) {
+		display: grid;
+		grid-template-columns: minmax(300px, 500px) 180px;
+		grid-column-gap: 93px;
+		place-content: center;
+	}
+	@media ( query( min, desktop ) ) {
+		grid-column-gap: 52px;
+	}
+}
+
+.a-card__content {
+	@media ( query( min, tablet ) ) {
+		order: 0;
+	}
+}
+
 .a-card__image-wrap {
 	position: relative;
 	overflow: hidden;
+
 	@media ( query( max, mobile ) ) {
 		width: 75px;
 		height: 75px;
 		border-radius: 50%;
 	}
+
 	@media ( query( min, mobile ) ) {
 		width: 180px;
   	height: 160px;
+	}
+
+	@media ( query( min, tablet ) ) {
+		order: 1;
 	}
 }
 
