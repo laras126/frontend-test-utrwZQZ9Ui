@@ -1,0 +1,13 @@
+// Author Card Component
+
+.a-card__image {
+	@media ( query( max, mobile ) ) {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+	}
+}
+
+.a-card__image {
+
+}
