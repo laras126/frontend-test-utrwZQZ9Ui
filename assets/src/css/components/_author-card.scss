@@ -1,13 +1,24 @@
 // Author Card Component
 
-.a-card__image {
+.a-card__image-wrap {
+	position: relative;
+	overflow: hidden;
 	@media ( query( max, mobile ) ) {
 		width: 75px;
 		height: 75px;
 		border-radius: 50%;
 	}
+	@media ( query( min, mobile ) ) {
+		width: 180px;
+  	height: 160px;
+	}
 }
 
 .a-card__image {
+	height: 100%;
+	object-fit: cover;
+}
+
+.a-card__title {
 
 }
