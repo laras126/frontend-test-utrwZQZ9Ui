@@ -16,3 +16,18 @@
 
 	@return map-get($z-layers, $layer);
 }
+
+// Style utilities
+
+@mixin social-button( $bkgd ) {
+	padding: 4px;
+	border-radius: 20px;
+	background-color: $bkgd;
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&:hover {
+		background-color: darken( $bkgd, 10% );
+	}
+}

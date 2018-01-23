@@ -1,12 +1,15 @@
 // Author Card Component
 
 .a-card {
+	padding: 28px;
+
 	@media ( query( min, tablet ) ) {
 		display: grid;
 		grid-template-columns: minmax(300px, 500px) 180px;
 		grid-column-gap: 93px;
 		place-content: center;
 	}
+
 	@media ( query( min, desktop ) ) {
 		grid-column-gap: 52px;
 	}
@@ -44,5 +47,26 @@
 }
 
 .a-card__title {
+	font-size: 30px;
+	font-weight: $bold;
+	@media ( query( min, tablet )) {
+		display: inline-flex;
+	}
+}
 
+.a-card__follow-btn {
+	@include social-button( $c-grey-medium );
+	> .text {
+		font-size: 12px;
+		padding-left: 5px;
+		padding-right: 10px;
+	}
+}
+
+.a-card__stories {
+	color: $c-link;
+}
+
+.a-card__stories__btn {
+	color: $c-link;
 }
