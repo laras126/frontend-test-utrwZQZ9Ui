@@ -31,3 +31,10 @@
 		background-color: darken( $bkgd, 10% );
 	}
 }
+
+@mixin unstyle-link {
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+}

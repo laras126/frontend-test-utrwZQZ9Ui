@@ -82,6 +82,7 @@
 }
 
 .a-card__follow-btn {
+	@include unstyle-link;
 	@include social-button( $c-grey-medium );
 	> .text {
 		font-size: 12px;
