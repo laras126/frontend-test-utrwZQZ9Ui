@@ -10,7 +10,7 @@
 
 .a-card {
 	padding: 28px;
-		display: grid;
+	display: grid;
 	grid-template-columns: minmax(min-content, 500px);
 	place-content: center;
 
@@ -19,7 +19,6 @@
 		grid-template-rows: auto auto;
 
 		grid-column-gap: 93px;
-		place-content: center;
 	}
 
 	@media ( $start-desktop ) {
@@ -40,9 +39,30 @@
 }
 
 .a-card__content {
+	position: relative;
+
 
 	@media ( $start-tablet ) {
 		order: 0;
+	}
+}
+
+.a-card__desc {
+	@media ( $mobile-only ) {
+		max-height: 100px;
+		overflow: hidden;
+		position: relative;
+		display: block;
+
+		&:after {
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(rgba($c-white, 0), $c-white);
+		}
 	}
 }
 
@@ -81,9 +101,37 @@
 	}
 }
 
+
+// Buttons
+
+.a-card__expand-btn {
+	display: flex;
+	justify-content: center;
+
+	height: 35px;
+	width: 35px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: $c-white;
+	border-radius: 50%;
+  border: solid 0.3px $c-white;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 0 0.3px rgba(0, 0, 0, 0.02);
+
+	> .icon {
+		fill: $c-grey-medium;
+		transform: scale(1.2); // Might be a better way to do this with viewbox or preserveAspectRatio
+	}
+
+	@media( $start-tablet ) {
+		display: none;
+	}
+}
+
 .a-card__follow-btn {
 	@include unstyle-link;
-	@include social-button( $c-grey-medium );
+	@include social-button( $c-grey-light );
 	> .text {
 		font-size: 12px;
 		padding-left: $nudge;
