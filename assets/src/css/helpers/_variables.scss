@@ -28,13 +28,13 @@ $z-layers: (
 );
 
 // Colors
-// Literal color names are mapped to semantic names.
-// Literal:
-$light-blue: #19acf0;
+// Literal color names are mapped to $c-* colors for use in stylesheets.
+$light-blue: 	#19acf0;
 
-// Semantic:
-$c-link: $light-blue;
-$c-hover: darken( $c-link, 20% );
+$c-grey-medium:#ebebeb;
 
-// Except for grey:
-$c-grey-medium: #ebebeb;
+$c-link: 				$light-blue;
+$c-hover: 			darken( $c-link, 20% );
+
+// Sizing Units
+$nudge: 				5px;
