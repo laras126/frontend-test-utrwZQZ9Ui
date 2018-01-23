@@ -26,3 +26,15 @@ $z-layers: (
 	'default': 1,
 	'depression': -100
 );
+
+// Colors
+// Literal color names are mapped to semantic names.
+// Literal:
+$light-blue: #19acf0;
+
+// Semantic:
+$c-link: $light-blue;
+$c-hover: darken( $c-link, 20% );
+
+// Except for grey:
+$c-grey-medium: #ebebeb;
