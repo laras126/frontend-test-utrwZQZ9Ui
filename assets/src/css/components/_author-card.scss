@@ -8,11 +8,22 @@
 // can then refer to those units rather than arbitrarily selecting sizes at will
 // in their design tool. I did that with one value, $nudge, in this test.
 
+// And the elephant in the file...GRID! There is a small fallback to ensure
+// a readable experience for Edge 15, which is the only browser in package.json
+// that does not support the current spec for Grid. I'd probably rething the fallback
+// after investigating how to target Edge 15 specifically as it currently affects
+// Edge 16 also, which is actually okay since 16 doesn't support place-content.
+
 .a-card {
 	padding: 28px;
 	display: grid;
-	grid-template-columns: minmax(min-content, 500px);
+	grid-template-columns: minmax( min-content, 500px );
 	place-content: center;
+
+	@supports ( display: -ms-grid ) { // Edge
+		max-width: 800px;
+		margin: 0 auto;
+	}
 
 	@media ( $start-tablet ) { // Introduces grid
 		grid-template-columns: minmax( 300px, 500px ) 180px;
@@ -60,7 +71,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			background-image: linear-gradient(rgba($c-white, 0), $c-white);
+			background-image: linear-gradient( rgba($c-white, 0), $c-white );
 		}
 	}
 }
@@ -94,7 +105,7 @@
 .a-card__title {
 	font-size: 30px;
 	font-weight: $bold;
-	@media ( $start-tablet) {
+	@media ( $start-tablet ) {
 		display: inline-block;
 		margin-right: $nudge;
 	}
