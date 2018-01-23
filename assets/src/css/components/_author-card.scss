@@ -15,15 +15,14 @@
 	place-content: center;
 
 	@media ( $start-tablet ) { // Introduces grid
-		grid-template-columns: minmax(300px, 500px) 180px;
+		grid-template-columns: minmax( 300px, 500px ) 180px;
 		grid-template-rows: auto auto;
-
 		grid-column-gap: 93px;
 	}
 
 	@media ( $start-desktop ) {
+		grid-template-columns: minmax( 300px, 740px ) 180px;
 		grid-column-gap: 52px;
-		grid-template-columns: minmax(300px, 740px) 180px;
 	}
 }
 
