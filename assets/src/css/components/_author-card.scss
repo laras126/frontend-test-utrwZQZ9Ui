@@ -121,6 +121,7 @@
 
 	> .icon {
 		fill: $c-grey-medium;
+		margin-top: $nudge;
 		transform: scale(1.2); // Might be a better way to do this with viewbox or preserveAspectRatio
 	}
 
