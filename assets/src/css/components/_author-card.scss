@@ -6,12 +6,26 @@
 	@media ( query( min, tablet ) ) {
 		display: grid;
 		grid-template-columns: minmax(300px, 500px) 180px;
+		grid-template-rows: auto auto;
+
 		grid-column-gap: 93px;
 		place-content: center;
 	}
 
 	@media ( query( min, desktop ) ) {
 		grid-column-gap: 52px;
+		grid-template-columns: minmax(300px, 740px) 180px;
+	}
+}
+
+.a-card__content, .a-card__header {
+	grid-column: 1 / 1;
+}
+
+.a-card__header {
+	@media ( query( max, tablet ) ) {
+		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 
@@ -25,18 +39,19 @@
 	position: relative;
 	overflow: hidden;
 
-	@media ( query( max, mobile ) ) {
+	@media ( query( max, tablet ) ) {
+		margin: auto;
+		display: flex;
+		justify-content: center;
 		width: 75px;
 		height: 75px;
 		border-radius: 50%;
 	}
 
-	@media ( query( min, mobile ) ) {
+	@media ( query( min, tablet ) ) {
 		width: 180px;
   	height: 160px;
-	}
-
-	@media ( query( min, tablet ) ) {
+		grid-column: 2 / 2;
 		order: 1;
 	}
 }

@@ -12,16 +12,23 @@
 		<div class="a-card__image-wrap">
 			<img src="./assets/images/hagrid.jpg" alt="" class="a-card__image" rel="js-card-image">
 		</div>
-		<div class="a-card__content">
+		<div class="a-card__header">
 			<h4 class="a-card__title" rel="js-card-title">Rubeus Hagrid</h4>
+			<!-- NOTE: depending on the action of this Facebook link, it would either be a button or a link.
+				If there were JS interactivity attached where "Follow on Facebook" happens without leaving this
+				page, then it would be button. If it goes to an exteral page or opens a new tab, a link. I am assuming the latter for this test. -->
 			<a class="a-card__follow-btn" rel="js-card-follow-link">
-				<!-- NOTE: This SVG would be an include, or the button broken into another component -->
+				<!-- NOTE: This SVG would be an include or broken into another component -->
 				<svg width="25" height="25" class="icon" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#3A5795" cx="12.5" cy="12.5" r="12.5"/><path d="M15.161 11.926H13.42v6.14h-2.58v-6.14H9.613v-2.17h1.227V8.354c0-1.005.482-2.576 2.603-2.576l1.912.008V7.89h-1.387c-.226 0-.548.112-.548.59v1.276h1.967l-.226 2.17z" fill="#FFF"/></g></svg>
 				<span class="text">Follow on Facebook</span>
 			</a>
-			<div class="a-card__stories">
-				<button class="a-card__stories-btn"><span rel="js-card-stories-count">2</span> New Stories</button>
-			</div>
+		</div>
+		<div class="a-card__content">
+			<!-- NOTE: This button could also be its own component, possibly a version of the above -->
+			<button class="a-card__stories-btn">
+				<span class="text"><span rel="js-card-stories-count">2</span> New Stories</span>
+				<svg width="16" height="9" class="icon" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.107L2.357.117.882 1.624 8 8.118l7.118-6.495L13.643.118z" fill-rule="evenodd"/></svg>
+			</button>
 			<p class="a-card__desc" rel="js-card-desc">Rubeus Hagrid is a fictional character in the Harry Potter book series written by J. K. Rowling. He is introduced in Harry Potter and the Philosophers Stone as a half-giant and half-human who is the gamekeeper and Keeper of Keys and Grounds of Hogwarts, the primary setting for the first six novels. In the third novel Harry Potter and the Prisoner of Azkaban, Hagrid is promoted to Care of Magical Creatures teacher, and is later revealed to be a member of the Order of the Phoenix.</p>
 		</div>
 	</div>
