@@ -6,9 +6,9 @@
 // How to use corresponding mixin:
 // @media ( query( min, mobile ) ) {
 // Based on: https://www.npmjs.com/package/scss-query
-$g-breakpoint-mobile: 480px;
-$g-breakpoint-tablet: 768px;
-$g-breakpoint-desktop: 1100px;
+$g-breakpoint-mobile: 	480px;
+$g-breakpoint-tablet: 	768px;
+$g-breakpoint-desktop: 	1100px;
 
 $query-breakpoints: (
 	'mobile': $g-breakpoint-mobile,
@@ -16,8 +16,8 @@ $query-breakpoints: (
 	'desktop': $g-breakpoint-desktop
 );
 
-$mobile-only: query( max, tablet );
-$start-tablet: query( min, tablet );
+$mobile-only: 	query( max, tablet );
+$start-tablet: 	query( min, tablet );
 $start-desktop: query( min, desktop );
 
 // Z-Index named layers
@@ -33,12 +33,14 @@ $z-layers: (
 
 // Colors
 // Literal color names are mapped to $c-* colors for use in stylesheets.
-$light-blue: 	#19acf0;
+$light-blue: 	 #19acf0;
 
-$c-grey-medium:#ebebeb;
+$c-white: 		 #ffffff;
+$c-grey-light: #ebebeb;
+$c-grey-medium:#979797;
 
-$c-link: 				$light-blue;
-$c-hover: 			darken( $c-link, 20% );
+$c-link: 			 	 $light-blue;
+$c-hover: 		 	 darken( $c-link, 20% );
 
 // Sizing Units
-$nudge: 				5px;
+$nudge: 				 5px;
