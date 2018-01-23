@@ -16,7 +16,7 @@ $query-breakpoints: (
 	'desktop': $g-breakpoint-desktop
 );
 
-$end-mobile: query( max, tablet );
+$mobile-only: query( max, tablet );
 $start-tablet: query( min, tablet );
 $start-desktop: query( min, desktop );
 

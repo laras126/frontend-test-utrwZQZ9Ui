@@ -31,7 +31,7 @@
 }
 
 .a-card__header {
-	@media ( $end-mobile ) {
+	@media ( $mobile-only ) {
 		text-align: center;
 		margin-bottom: 20px;
 	}
@@ -48,7 +48,7 @@
 	position: relative;
 	overflow: hidden;
 
-	@media ( $end-mobile ) {
+	@media ( $mobile-only ) {
 		margin: auto;
 		display: flex;
 		justify-content: center;
