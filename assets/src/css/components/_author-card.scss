@@ -78,10 +78,39 @@
 	}
 }
 
-.a-card__stories {
+.a-card__stories-btn {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+	> .text {
 	color: $c-link;
+		font-size: 14px;
+		padding-right: $nudge;
 }
 
-.a-card__stories__btn {
-	color: $c-link;
+	> .icon {
+		fill: $c-link;
+	}
 }
+		padding-left: $nudge;
+		padding-right: 10px;
+	}
+}
+
+.a-card__stories-btn {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+	> .text {
+		color: $c-link;
+		font-size: 14px;
+		padding-right: $nudge;
+	}
+
+	> .icon {
+		fill: $c-link;
+	}
+}
+
