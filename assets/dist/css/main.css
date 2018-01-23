@@ -301,6 +301,13 @@ body {
   place-content: center;
 }
 
+@supports (display: -ms-grid) {
+  .a-card {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 48rem) {
   .a-card {
     grid-template-columns: minmax(18.75rem, 31.25rem) 11.25rem;
@@ -311,8 +318,8 @@ body {
 
 @media (min-width: 68.75rem) {
   .a-card {
-    grid-column-gap: 3.25rem;
     grid-template-columns: minmax(18.75rem, 46.25rem) 11.25rem;
+    grid-column-gap: 3.25rem;
   }
 }
 
