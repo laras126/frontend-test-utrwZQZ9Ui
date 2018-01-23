@@ -7,7 +7,7 @@
 // @media ( query( min, mobile ) ) {
 // Based on: https://www.npmjs.com/package/scss-query
 $g-breakpoint-mobile: 480px;
-$g-breakpoint-tablet: 650px;
+$g-breakpoint-tablet: 768px;
 $g-breakpoint-desktop: 1100px;
 
 $query-breakpoints: (
@@ -15,6 +15,10 @@ $query-breakpoints: (
 	'tablet': $g-breakpoint-tablet,
 	'desktop': $g-breakpoint-desktop
 );
+
+$end-mobile: query( max, tablet );
+$start-tablet: query( min, tablet );
+$start-desktop: query( min, desktop );
 
 // Z-Index named layers
 // How to use corresponding mixin:

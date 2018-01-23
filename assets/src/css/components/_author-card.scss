@@ -4,17 +4,14 @@
 
 // There are a lot of somewhat isolated pixel values here.
 // Ideally, these would be part of a sizing units scale determined with
-// the designers and included in the variables file. I did that with a
-// couple of the values for this test.
-
-// I would also consolidate the media queries into variables such as
-// $start-tablet: query( min, mobile );
-// to make the stylesheet more readable
+// the designers and included in the variables file. With a sizing scale, designers
+// can then refer to those units rather than arbitrarily selecting sizes at will
+// in their design tool. I did that with one value, $nudge, in this test.
 
 .a-card {
 	padding: 28px;
 
-	@media ( query( min, tablet ) ) {
+	@media ( $start-tablet ) {
 		display: grid;
 		grid-template-columns: minmax(300px, 500px) 180px;
 		grid-template-rows: auto auto;
@@ -23,7 +20,7 @@
 		place-content: center;
 	}
 
-	@media ( query( min, desktop ) ) {
+	@media ( $start-desktop ) {
 		grid-column-gap: 52px;
 		grid-template-columns: minmax(300px, 740px) 180px;
 	}
@@ -34,14 +31,15 @@
 }
 
 .a-card__header {
-	@media ( query( max, tablet ) ) {
+	@media ( $end-mobile ) {
 		text-align: center;
 		margin-bottom: 20px;
 	}
 }
 
 .a-card__content {
-	@media ( query( min, tablet ) ) {
+
+	@media ( $start-tablet ) {
 		order: 0;
 	}
 }
@@ -50,7 +48,7 @@
 	position: relative;
 	overflow: hidden;
 
-	@media ( query( max, tablet ) ) {
+	@media ( $end-mobile ) {
 		margin: auto;
 		display: flex;
 		justify-content: center;
@@ -59,7 +57,7 @@
 		border-radius: 50%;
 	}
 
-	@media ( query( min, tablet ) ) {
+	@media ( $start-tablet ) {
 		width: 180px;
 		height: 160px;
 		grid-column: 2 / 2;
@@ -75,7 +73,7 @@
 .a-card__title {
 	font-size: 30px;
 	font-weight: $bold;
-	@media ( query( min, tablet )) {
+	@media ( $start-tablet) {
 		display: inline-block;
 		margin-right: $nudge;
 	}
