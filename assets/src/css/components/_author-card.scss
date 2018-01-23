@@ -10,9 +10,11 @@
 
 .a-card {
 	padding: 28px;
-
-	@media ( $start-tablet ) {
 		display: grid;
+	grid-template-columns: minmax(min-content, 500px);
+	place-content: center;
+
+	@media ( $start-tablet ) { // Introduces grid
 		grid-template-columns: minmax(300px, 500px) 180px;
 		grid-template-rows: auto auto;
 
