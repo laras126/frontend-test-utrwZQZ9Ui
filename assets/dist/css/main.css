@@ -323,7 +323,8 @@ body {
   }
 }
 
-.a-card__content, .a-card__header {
+.a-card__content,
+.a-card__header {
   grid-column: 1 / 1;
 }
 
@@ -342,24 +343,6 @@ body {
   .a-card__content {
     -webkit-box-ordinal-group: 1;
             order: 0;
-  }
-}
-
-@media (max-width: 47.9375rem) {
-  .a-card__desc {
-    max-height: 6.25rem;
-    overflow: hidden;
-    position: relative;
-    display: block;
-  }
-  .a-card__desc:after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
   }
 }
 
@@ -417,17 +400,21 @@ body {
   width: 2.1875rem;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1000;
   background-color: #ffffff;
   border-radius: 50%;
   border: solid 0.3px #ffffff;
-  box-shadow: 0 0 0.125rem 0 rgba(0, 0, 0, .12), 0 0.125rem 0.125rem 0 rgba(0, 0, 0, .24), 0 0 0 0.3px rgba(0, 0, 0, .02);
+  box-shadow: 0 0 0.125rem 0 rgba(245, 62, 62, .12), 0 0.125rem 0.125rem 0 rgba(0, 0, 0, .24), 0 0 0 0.3px rgba(0, 0, 0, .02);
 }
 
 .a-card__expand-btn > .icon {
+  transition: 0.25s ease all;
   fill: #979797;
-  margin-top: 0.3125rem;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg) scale(1.2);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 @media (min-width: 48rem) {
@@ -478,6 +465,29 @@ body {
 
 .a-card__stories-btn > .icon {
   fill: #19acf0;
+}
+
+@media (max-width: 47.9375rem) {
+  .js-collapsed-desc {
+    position: relative;
+    display: block;
+    max-height: 6.25rem;
+    overflow: hidden;
+  }
+  .js-collapsed-desc::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+  }
+  .js-collapsed-desc + .a-card__expand-btn > .icon {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    margin-top: 0.3125rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
