@@ -295,24 +295,27 @@ body {
 
 .a-card {
   padding: 1.75rem;
-  display: grid;
-  grid-template-columns: minmax(-webkit-min-content, 31.25rem);
-  grid-template-columns: minmax(min-content, 31.25rem);
-  place-content: center;
+  margin: 0 auto;
 }
 
-@supports (display: -ms-grid) {
+@media (max-width: 47.9375rem) {
   .a-card {
-    max-width: 50rem;
-    margin: 0 auto;
+    max-width: 31.25rem;
   }
 }
 
 @media (min-width: 48rem) {
   .a-card {
+    display: grid;
     grid-template-columns: minmax(18.75rem, 31.25rem) 11.25rem;
     grid-template-rows: auto auto;
     grid-column-gap: 5.8125rem;
+    place-content: center;
+  }
+  @supports (display: -ms-grid) {
+    .a-card {
+      max-width: 50rem;
+    }
   }
 }
 
