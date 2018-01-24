@@ -22,14 +22,14 @@
 		max-width: 500px;
 	}
 
-	@media ( $start-tablet ) { // Introduces grid
+	@media ( $start-tablet ) { // Introduces Grid
 		display: grid;
 		grid-template-columns: minmax( 300px, 500px ) 180px;
 		grid-template-rows: auto auto;
 		grid-column-gap: 93px;
 		place-content: center;
 
-		@supports( display: -ms-grid ) { // Edge 15
+		@supports ( display: -ms-grid ) { // Edge 15
 			max-width: 800px;
 		}
 	}
@@ -54,7 +54,6 @@
 
 .a-card__content {
 	position: relative;
-
 
 	@media ( $start-tablet ) {
 		order: 0;
