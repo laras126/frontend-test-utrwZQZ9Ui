@@ -37,7 +37,8 @@
 	}
 }
 
-.a-card__content, .a-card__header {
+.a-card__content,
+.a-card__header {
 	grid-column: 1 / 1;
 }
 
@@ -115,6 +116,7 @@
 .a-card__title {
 	font-size: 30px;
 	font-weight: $bold;
+
 	@media ( $start-tablet ) {
 		display: inline-block;
 		margin-right: $nudge;
@@ -134,18 +136,24 @@
 	margin-left: auto;
 	margin-right: auto;
 
+	position: relative;
+	z-index: z( 'mountain' );
+
 	background-color: $c-white;
 	border-radius: 50%;
   border: solid 0.3px $c-white;
-	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 0 0.3px rgba(0, 0, 0, 0.02);
+	box-shadow: 0 0 2px 0 rgba( 245, 62, 62, 0.12),
+							0 2px 2px 0 rgba( 0, 0, 0, 0.24 ),
+							0 0 0 0.3px rgba( 0, 0, 0, 0.02 );
 
 	> .icon {
+		transition: 0.25s ease all;
 		fill: $c-grey-medium;
-		margin-top: $nudge;
-		transform: scale(1.2); // Might be a better way to do this with viewbox or preserveAspectRatio
+		transform: rotate( 180deg ) scale( 1.2 );
+		transform-origin: 50% 50%;
 	}
 
-	@media( $start-tablet ) {
+	@media ( $start-tablet ) {
 		display: none;
 	}
 }
@@ -153,6 +161,7 @@
 .a-card__follow-btn {
 	@include unstyle-link;
 	@include social-button( $c-grey-light );
+
 	> .text {
 		font-size: 12px;
 		padding-left: $nudge;
