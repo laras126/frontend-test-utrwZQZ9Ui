@@ -10,6 +10,6 @@ export function init() {
 // NOTE: This could be reused and abstracted as a helper function
 // to account for the "# New Stories" toggle
 export function handleBioToggle( el ) {
-	$card.desc.classList.toggle( 'js-collapsed' );
+	$card.desc.classList.toggle( 'js-collapsed-desc' );
 }
 
