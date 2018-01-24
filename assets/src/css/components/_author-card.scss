@@ -115,9 +115,7 @@
 	background-color: $c-white;
 	border-radius: 50%;
   border: solid 0.3px $c-white;
-	box-shadow: 0 0 2px 0 rgba( 245, 62, 62, 0.12),
-							0 2px 2px 0 rgba( 0, 0, 0, 0.24 ),
-							0 0 0 0.3px rgba( 0, 0, 0, 0.02 );
+	box-shadow: 0 0 2px 0 rgba( 245, 62, 62, 0.12), 0 2px 2px 0 rgba( 0, 0, 0, 0.24 ), 0 0 0 0.3px rgba( 0, 0, 0, 0.02 );
 
 	> .icon {
 		transition: 0.25s ease all;
