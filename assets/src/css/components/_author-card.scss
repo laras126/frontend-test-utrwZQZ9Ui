@@ -58,30 +58,6 @@
 	}
 }
 
-.js-collapsed {
-	@media ( $mobile-only ) {
-		position: relative;
-		display: block;
-		max-height: 100px;
-		overflow: hidden;
-
-		&::after {
-			content: '';
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-image: linear-gradient( rgba( $c-white, 0 ), $c-white );
-		}
-
-		& + .a-card__expand-btn > .icon {
-			transform: scale( 1.2 );
-			margin-top: $nudge;
-		}
-	}
-}
-
 .a-card__image-wrap {
 	position: relative;
 	overflow: hidden;
@@ -180,3 +156,28 @@
 	}
 }
 
+// Stateful styles
+
+.js-collapsed-desc {
+	@media ( $mobile-only ) {
+		position: relative;
+		display: block;
+		max-height: 100px;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient( rgba( $c-white, 0 ), $c-white );
+		}
+
+		& + .a-card__expand-btn > .icon {
+			transform: scale( 1.2 );
+			margin-top: $nudge;
+		}
+	}
+}
