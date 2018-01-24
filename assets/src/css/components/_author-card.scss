@@ -10,25 +10,28 @@
 
 // And the elephant in the file...GRID! There is a small fallback to ensure
 // a readable experience for Edge 15, which is the only browser in package.json
-// that does not support the current spec for Grid. I'd probably rething the fallback
+// that does not support the current spec for Grid. I'd probably rethink the fallback
 // after investigating how to target Edge 15 specifically as it currently affects
 // Edge 16 also, which is actually okay since 16 doesn't support place-content.
 
 .a-card {
 	padding: 28px;
-	display: grid;
-	grid-template-columns: minmax( min-content, 500px );
-	place-content: center;
+	margin: 0 auto;
 
-	@supports ( display: -ms-grid ) { // Edge
-		max-width: 800px;
-		margin: 0 auto;
+	@media ( $mobile-only ) {
+		max-width: 500px;
 	}
 
 	@media ( $start-tablet ) { // Introduces grid
+		display: grid;
 		grid-template-columns: minmax( 300px, 500px ) 180px;
 		grid-template-rows: auto auto;
 		grid-column-gap: 93px;
+		place-content: center;
+
+		@supports( display: -ms-grid ) { // Edge 15
+			max-width: 800px;
+		}
 	}
 
 	@media ( $start-desktop ) {
